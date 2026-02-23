@@ -9,7 +9,6 @@ Official implementation of **CancerFormer**, a multimodal deep learning framewor
 
 ## Table of Contents
 
-- [Abstract](#abstract)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Data Requirements](#data-requirements)
@@ -17,19 +16,6 @@ Official implementation of **CancerFormer**, a multimodal deep learning framewor
 - [Configuration](#configuration)
 - [Output Structure](#output-structure)
 - [License](#license)
-
-## Abstract
-
-Dissection of cancer dependencies is the central topic of cancer research. Recent advances in artificial intelligence (AI) have provided opportunities for rapid prediction of cancer essential genes. However, these AI models are often limited by the incapability of leveraging multimodal information or insufficient benchmarks, leading to low success rates in physiologically relevant practice.
-
-Here, we developed **CancerFormer**, a multimodal deep learning framework that integrates single-cell RNA sequencing (scRNA-seq), TCGA transcriptomic profiles, and protein-protein interaction (PPI) networks to predict cancer gene essentiality. By employing a Transformer architecture to capture gene functional context and Graph Neural Networks to embed topological structures of PPI networks, CancerFormer overcomes the generalization limitations of existing methods.
-
-Using experimental results of CRISPR screens from multiple cancer cell lines (HeLa, A549, and U-87MG), we demonstrated that CancerFormer consistently outperformed state-of-the-art baseline models under both gene-wise and sample-wise cross-validation splits as measured by multiple evaluation metrics. In subsequent applications, CancerFormer demonstrated strong generalization ability, achieving a **90% experimental verification rate** for top candidates in colorectal cancer HCT116 cells.
-
-Most importantly, without pre-training on patient-derived organoids (PDOs) data, CancerFormer successfully captured inter-patient heterogeneity in PDOs and revealed a context-specific metabolic dependency on oxidative phosphorylation pathways in 3D culture compared to 2D cell lines. Functional assays on top predicted targets confirmed their essentiality in PDO growth.
-
-This study established CancerFormer as a rigorously benchmarked multimodal AI model for predicting cancer dependencies with physiological relevance.
-
 
 ## Installation
 
