@@ -1,0 +1,58 @@
+# EssentialGene project paths configuration
+# Override with environment variable ESSGENE_DATA_ROOT or edit paths below.
+
+data_root: "resources"
+
+# Expression data (TCGA bulk RNA-seq)
+expression:
+  cesc: "${data_root}/TCGA/TCGA-CESC_mRNA.csv"
+  gbm: "${data_root}/TCGA/TCGA-GBM_mRNA.csv"
+  luad: "${data_root}/TCGA/TCGA-LUAD_mRNA.csv"
+  coad: "${data_root}/TCGA/TCGA-COAD_mRNA.csv"
+
+# Essentiality labels
+labels:
+  cesc: "${data_root}/single_cell_dataset/cesc/{cell_line}_label.csv"
+  gbm: "${data_root}/single_cell_dataset/gbm/gbm_label.csv"
+  luad: "${data_root}/single_cell_dataset/luad/luad_label.csv"
+  coad: "${data_root}/single_cell_dataset/coad/{cell_line}_label.csv"
+
+# Tokenized datasets
+datasets:
+  cesc:
+    train: "${data_root}/single_cell_dataset/cesc/train/cesc_train.dataset"
+    test: "${data_root}/single_cell_dataset/cesc/test/cesc_test.dataset"
+  gbm:
+    train: "${data_root}/single_cell_dataset/gbm/train/gbm_train.dataset"
+    test: "${data_root}/single_cell_dataset/gbm/test/gbm_test.dataset"
+  luad:
+    train: "${data_root}/single_cell_dataset/luad/train/luad_train.dataset"
+    test: "${data_root}/single_cell_dataset/luad/test/luad_test.dataset"
+  coad:
+    train: "${data_root}/single_cell_dataset/coad/{cell_line}/train/{cell_line}_train.dataset"
+    test: "${data_root}/single_cell_dataset/coad/{cell_line}/test/{sample}/{cell_line}_test.dataset"
+
+# Model paths
+models:
+  geneformer_6l: "${data_root}/Geneformer"
+
+# Output directories
+output:
+  cesc: "${data_root}/cancerformer/single_model/cesc"
+  gbm: "${data_root}/cancerformer/single_model/gbm"
+  luad: "${data_root}/cancerformer/single_model/luad"
+  coad: "${data_root}/cancerformer/single_model/coad"
+
+# Gene info and embeddings
+gene_info_table: "${data_root}/gene_info_table.csv"
+scgpt_embeddings: "${data_root}/single_cell_dataset/scgpt_gene_embeddings.npy"
+ppi_graph: "${data_root}/complete_ess_ppi.csv"
+
+# Validation gene summaries (for auhc@n evaluation)
+gene_summaries:
+  a549_4w: "${data_root}/CRISPR/A549/A549 D0vs4 weeks.gene_summary.txt"
+  hela_4w: "${data_root}/CRISPR/Hela/Hela D0vs4 weeks.gene_summary.txt"
+  u87_4w: "${data_root}/CRISPR/u87-mg/U87 D0vs4 weeks.gene_summary.txt"
+  a549_3w: "${data_root}/CRISPR/A549/A549 D0vs3 weeks.gene_summary.txt"
+  hela_3w: "${data_root}/CRISPR/Hela/Hela D0vs3 weeks.gene_summary.txt"
+  u87_3w: "${data_root}/CRISPR/u87-mg/U87 D0vs3 weeks.gene_summary.txt"

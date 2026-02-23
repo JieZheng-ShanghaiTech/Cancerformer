@@ -1,0 +1,97 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Large data files
+*.h5ad
+*.npy
+*.pkl
+*.pt
+*.pth
+*.tar.gz
+*.zip
+*.gz
+*.Rdata
+
+# Datasets (too large for git)
+data/
+2_method/
+Ess_2Celllines/
+GSE*/
+*.dataset/
+*.mtx
+*.csv.gz
+
+# Model checkpoints
+checkpoint-*/
+*.safetensors
+trained_models/
+cancerformer/
+geneformer_geneClassifier_model/
+
+# Logs and outputs
+wandb/
+runs/
+*.log
+*.out
+*.err
+output/
+results/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+*.orig
+
+# Keep these small config files
+!config/*.yaml
+!config/*.yml
+!requirements.txt
+!README.md
